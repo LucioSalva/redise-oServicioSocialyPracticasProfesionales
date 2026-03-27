@@ -1,0 +1,1096 @@
+/* ============================================================
+   SERVICIO SOCIAL Y PRÁCTICAS PROFESIONALES — Ecatepec
+   Archivo: assets/css/styles.css
+   ============================================================ */
+
+/* ============================================================
+   1. CSS VARIABLES — PALETA INSTITUCIONAL
+   ============================================================ */
+:root {
+  --color-vino:         #691C32;
+  --color-vino-light:   #8B2A4A;
+  --color-vino-dark:    #4A1323;
+  --color-dorado:       #BC955C;
+  --color-dorado-light: #D4AD74;
+  --color-dorado-dark:  #9A7A48;
+  --color-arena:        #ECD798;
+  --color-arena-light:  #F2E4B5;
+  --color-arena-dark:   #D4C07A;
+  --color-white:        #FFFFFF;
+  --color-light-gray:   #F8F9FA;
+  --color-gray:         #6C757D;
+  --color-dark:         #212529;
+  --font-primary:       'Poppins', sans-serif;
+  --font-secondary:     'Montserrat', sans-serif;
+
+  /* Spacing & radii */
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --shadow-sm:   0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md:   0 4px 20px rgba(0,0,0,0.10);
+  --shadow-vino: 0 4px 20px rgba(105,28,50,0.15);
+}
+
+/* ============================================================
+   2. RESET & BASE
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-dark);
+  background-color: var(--color-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ============================================================
+   3. NAVBAR INSTITUCIONAL
+   ============================================================ */
+.navbar-institucional {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+.navbar-inst-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  gap: 16px;
+}
+
+.navbar-inst-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.navbar-inst-logo img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-inst-menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: nowrap;
+}
+
+.navbar-inst-menu li a {
+  color: rgba(255,255,255,0.88);
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 11px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+  display: block;
+}
+
+.navbar-inst-menu li a:hover {
+  background-color: rgba(255,255,255,0.15);
+  color: var(--color-white);
+}
+
+.navbar-inst-toggler {
+  display: none;
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.5);
+  color: var(--color-white);
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  line-height: 1;
+  transition: background 0.2s ease;
+}
+
+.navbar-inst-toggler:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* Mobile nav drawer */
+.navbar-inst-mobile {
+  display: none;
+  background-color: var(--color-vino-dark);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 8px 0 16px;
+}
+
+.navbar-inst-mobile.open {
+  display: block;
+}
+
+.navbar-inst-mobile ul {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.navbar-inst-mobile ul li a {
+  display: block;
+  color: rgba(255,255,255,0.88);
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease;
+}
+
+.navbar-inst-mobile ul li a:hover {
+  background-color: rgba(255,255,255,0.12);
+  color: var(--color-white);
+}
+
+/* ============================================================
+   4. BREADCRUMB
+   ============================================================ */
+.breadcrumb-wrapper {
+  background-color: var(--color-white);
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  padding: 10px 0;
+}
+
+.breadcrumb-custom {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-family: var(--font-primary);
+  font-size: 13px;
+  color: var(--color-gray);
+}
+
+.breadcrumb-custom a {
+  color: var(--color-gray);
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-custom a:hover {
+  color: var(--color-vino);
+}
+
+.breadcrumb-custom .separator {
+  color: var(--color-dorado);
+  font-size: 11px;
+}
+
+.breadcrumb-custom .active {
+  color: var(--color-vino);
+  font-weight: 600;
+}
+
+/* ============================================================
+   5. HERO SECTION
+   ============================================================ */
+.hero-section {
+  background-color: var(--color-vino-dark);
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(188,149,92,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(139,42,74,0.25) 0%, transparent 50%),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.012) 40px,
+      rgba(255,255,255,0.012) 80px
+    );
+  padding: 80px 0 72px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-dorado-dark), var(--color-dorado), var(--color-dorado-light), var(--color-dorado));
+}
+
+.hero-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  background: rgba(188,149,92,0.15);
+  border: 2px solid rgba(188,149,92,0.4);
+  border-radius: 50%;
+  margin-bottom: 24px;
+  color: var(--color-dorado-light);
+  font-size: 32px;
+}
+
+.hero-title {
+  font-family: var(--font-secondary);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.2;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.hero-divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-dorado), var(--color-dorado-light));
+  border-radius: 2px;
+  margin: 0 0 24px 0;
+}
+
+.hero-description {
+  color: rgba(255,255,255,0.80);
+  font-size: 15px;
+  line-height: 1.75;
+  max-width: 700px;
+  font-weight: 400;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(188,149,92,0.18);
+  border: 1px solid rgba(188,149,92,0.35);
+  color: var(--color-arena);
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* ============================================================
+   6. TAB NAVIGATION — MODALIDADES
+   ============================================================ */
+.modalidades-section {
+  background-color: var(--color-light-gray);
+  padding: 56px 0 64px;
+}
+
+.section-heading {
+  font-family: var(--font-secondary);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-vino);
+  margin-bottom: 8px;
+}
+
+.section-subheading {
+  color: var(--color-gray);
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+/* Tab pills — override Bootstrap */
+.nav-modalidades {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.nav-modalidades .nav-link {
+  font-family: var(--font-primary);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--color-vino);
+  color: var(--color-vino);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-modalidades .nav-link:hover {
+  background-color: rgba(105,28,50,0.07);
+}
+
+.nav-modalidades .nav-link.active {
+  background-color: var(--color-vino);
+  color: var(--color-white);
+  border-color: var(--color-vino);
+  box-shadow: var(--shadow-vino);
+}
+
+.nav-modalidades .nav-link i {
+  font-size: 18px;
+}
+
+/* ============================================================
+   6b. TAB PANES — reglas propias para no depender del CDN de Bootstrap
+   ============================================================ */
+.tab-content > .tab-pane {
+  display: none;
+}
+.tab-content > .tab-pane.active {
+  display: block;
+}
+.tab-pane.fade {
+  opacity: 0;
+  transition: opacity 0.15s linear;
+}
+.tab-pane.fade.show {
+  opacity: 1;
+}
+
+/* ============================================================
+   7. BADGE GRATUITO
+   ============================================================ */
+.badge-gratuito {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #198754;
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(25,135,84,0.25);
+  margin-bottom: 28px;
+}
+
+/* ============================================================
+   8. CARD CUSTOM
+   ============================================================ */
+.card-custom {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow 0.25s ease;
+  height: 100%;
+}
+
+.card-custom:hover {
+  box-shadow: 0 6px 28px rgba(105,28,50,0.10);
+}
+
+.card-custom-header {
+  background: var(--color-light-gray);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.card-custom-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.card-custom-dot-vino   { background: var(--color-vino); }
+.card-custom-dot-dorado { background: var(--color-dorado); }
+.card-custom-dot-arena  { background: var(--color-arena-dark); }
+
+.card-custom-body {
+  padding: 28px;
+}
+
+.card-custom-title {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  color: var(--color-vino);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-custom-title i {
+  font-size: 1.2rem;
+  color: var(--color-dorado);
+}
+
+/* ============================================================
+   9. LISTA DE REQUISITOS — NUMERADA CUSTOM
+   ============================================================ */
+.requisitos-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.requisitos-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--color-dark);
+  line-height: 1.55;
+}
+
+.req-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 26px;
+  height: 26px;
+  background: var(--color-arena-light);
+  border: 2px solid var(--color-dorado);
+  color: var(--color-dorado-dark);
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ============================================================
+   10. STEPPER — PROCEDIMIENTO
+   ============================================================ */
+.stepper-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.stepper-item {
+  display: flex;
+  gap: 16px;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.stepper-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Vertical connecting line */
+.stepper-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 17px;
+  top: 38px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-vino-light), var(--color-arena-dark));
+  opacity: 0.4;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  background: var(--color-vino);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(105,28,50,0.30);
+}
+
+.step-content {
+  padding-top: 6px;
+}
+
+.step-content p {
+  font-size: 14px;
+  color: var(--color-dark);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.step-content strong {
+  color: var(--color-vino);
+}
+
+/* ============================================================
+   11. CALLOUT — NOTA IMPORTANTE
+   ============================================================ */
+.callout-nota {
+  background-color: var(--color-arena-light);
+  border-left: 4px solid var(--color-vino);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 18px 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-top: 8px;
+}
+
+.callout-nota i {
+  color: var(--color-dorado-dark);
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.callout-nota-content strong {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-vino);
+  margin-bottom: 4px;
+}
+
+.callout-nota-content p {
+  font-size: 13.5px;
+  color: var(--color-dark);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ============================================================
+   12. SECCIÓN FORMATOS DESCARGABLES
+   ============================================================ */
+.formatos-section-title {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-vino);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.formatos-section-title i {
+  font-size: 1.1rem;
+  color: var(--color-dorado);
+}
+
+.formatos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.formato-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.formato-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-gray);
+  text-align: center;
+  font-family: var(--font-primary);
+}
+
+/* ============================================================
+   13. BOTONES CUSTOM
+   ============================================================ */
+.btn-custom {
+  width: fit-content;
+  min-width: 100px;
+  height: 45px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: 2.5px solid #E0E1E4;
+  box-shadow: 0px 0px 20px -20px;
+  cursor: pointer;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  transition: all 0.2s ease-in-out 0ms;
+  user-select: none;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn-custom:hover {
+  box-shadow: 0px 0px 20px -18px;
+}
+
+.btn-custom:active {
+  transform: scale(0.95);
+}
+
+.btn-custom-vino {
+  background-color: var(--color-vino);
+  color: var(--color-white);
+  border-color: var(--color-vino-dark);
+}
+
+.btn-custom-vino:hover {
+  background-color: var(--color-vino-light);
+  color: var(--color-white);
+}
+
+.btn-custom-dorado {
+  background-color: var(--color-dorado);
+  color: var(--color-white);
+  border-color: var(--color-dorado-dark);
+}
+
+.btn-custom-dorado:hover {
+  background-color: var(--color-dorado-light);
+  color: var(--color-white);
+}
+
+.btn-custom-outline-vino {
+  background-color: transparent;
+  color: var(--color-vino);
+  border-color: var(--color-vino);
+}
+
+.btn-custom-outline-vino:hover {
+  background-color: var(--color-vino);
+  color: var(--color-white);
+}
+
+.btn-custom-outline-dorado {
+  background-color: transparent;
+  color: var(--color-dorado-dark);
+  border-color: var(--color-dorado);
+}
+
+.btn-custom-outline-dorado:hover {
+  background-color: var(--color-dorado);
+  color: var(--color-white);
+}
+
+/* ============================================================
+   14. DOWNLOAD BUTTON
+   ============================================================ */
+.download-button {
+  position: relative;
+  border-width: 0;
+  color: var(--color-white);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 1;
+  font-family: var(--font-primary);
+  background: transparent;
+}
+
+.download-button .docs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 40px;
+  padding: 0 12px;
+  border-radius: 4px;
+  z-index: 1;
+  background-color: var(--color-vino);
+  border: solid 1px var(--color-vino-dark);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.download-button:hover {
+  box-shadow:
+    rgba(105,28,50,0.25) 0px 54px 55px,
+    rgba(105,28,50,0.12) 0px -12px 30px,
+    rgba(105,28,50,0.12) 0px 4px 6px,
+    rgba(105,28,50,0.17) 0px 12px 13px,
+    rgba(105,28,50,0.09) 0px -3px 5px;
+}
+
+.download-button .download {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  margin: 0 auto;
+  z-index: -1;
+  border-radius: 4px;
+  transform: translateY(0%);
+  background-color: var(--color-dorado);
+  border: solid 1px var(--color-dorado-dark);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.download-button:hover .download {
+  transform: translateY(100%);
+}
+
+.download-button .download svg polyline,
+.download-button .download svg line {
+  animation: docs-bounce 1s infinite;
+}
+
+@keyframes docs-bounce {
+  0%   { transform: translateY(0%); }
+  50%  { transform: translateY(-15%); }
+  100% { transform: translateY(0%); }
+}
+
+/* ============================================================
+   15. SECCIÓN CONTACTO Y UBICACIÓN
+   ============================================================ */
+.contacto-section {
+  background-color: var(--color-white);
+  border-top: 3px solid var(--color-dorado);
+  padding: 64px 0;
+}
+
+.contacto-section-title {
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-vino);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contacto-section-title i {
+  color: var(--color-dorado);
+  font-size: 1.4rem;
+}
+
+.contacto-subtitle {
+  color: var(--color-gray);
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.info-card {
+  background: var(--color-light-gray);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.info-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: var(--color-vino);
+  color: var(--color-white);
+  border-radius: var(--radius-sm);
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.info-card-content {
+  flex: 1;
+}
+
+.info-card-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 4px;
+}
+
+.info-card-value {
+  font-size: 14px;
+  color: var(--color-dark);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.info-card-value a {
+  color: var(--color-vino);
+  font-weight: 600;
+}
+
+.info-card-value a:hover {
+  color: var(--color-vino-light);
+}
+
+/* Mapa placeholder */
+.mapa-placeholder {
+  background: var(--color-light-gray);
+  border: 2px dashed var(--color-arena-dark);
+  border-radius: var(--radius-md);
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--color-gray);
+  text-align: center;
+  padding: 32px;
+}
+
+.mapa-placeholder i {
+  font-size: 52px;
+  color: var(--color-dorado);
+  opacity: 0.7;
+}
+
+.mapa-placeholder h3 {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-dark);
+  margin: 0;
+}
+
+.mapa-placeholder p {
+  font-size: 13px;
+  color: var(--color-gray);
+  margin: 0;
+  max-width: 240px;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   16. FOOTER INSTITUCIONAL
+   ============================================================ */
+.footer-institucional {
+  background-color: var(--color-vino-dark);
+  padding: 40px 0 24px;
+  color: rgba(255,255,255,0.75);
+}
+
+.footer-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-dorado), var(--color-dorado-light));
+  border-radius: 2px;
+  margin: 16px auto;
+}
+
+.footer-logo-text {
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: 0.5px;
+}
+
+.footer-dept {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+  margin-top: 6px;
+}
+
+.footer-copyright {
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.50);
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.10);
+  text-align: center;
+}
+
+/* ============================================================
+   17. UTILITY CLASSES
+   ============================================================ */
+.text-vino     { color: var(--color-vino) !important; }
+.text-dorado   { color: var(--color-dorado) !important; }
+.bg-vino       { background-color: var(--color-vino) !important; }
+.bg-vino-dark  { background-color: var(--color-vino-dark) !important; }
+.bg-arena      { background-color: var(--color-arena-light) !important; }
+
+.divider-dorado {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-dorado), transparent);
+  margin: 32px 0;
+  opacity: 0.5;
+}
+
+/* ============================================================
+   18. RESPONSIVE — MOBILE FIRST BREAKPOINTS
+   ============================================================ */
+
+/* --- 576px (sm) --- */
+@media (max-width: 575.98px) {
+  .hero-section {
+    padding: 52px 0 48px;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-icon-wrapper {
+    width: 58px;
+    height: 58px;
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .modalidades-section {
+    padding: 36px 0 40px;
+  }
+
+  .nav-modalidades {
+    flex-direction: column;
+  }
+
+  .nav-modalidades .nav-link {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .formatos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .formato-item {
+    align-items: flex-start;
+  }
+
+  .download-button {
+    width: 100%;
+  }
+
+  .download-button .docs {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-custom {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contacto-section {
+    padding: 40px 0;
+  }
+
+  .stepper-item:not(:last-child)::after {
+    left: 17px;
+  }
+}
+
+/* --- 768px (md) --- */
+@media (max-width: 767.98px) {
+  .navbar-inst-menu {
+    display: none;
+  }
+
+  .navbar-inst-toggler {
+    display: flex;
+    align-items: center;
+  }
+
+  .formatos-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mapa-placeholder {
+    min-height: 240px;
+    margin-top: 24px;
+  }
+
+  .section-heading {
+    font-size: 1.35rem;
+  }
+}
+
+/* --- 992px (lg) --- */
+@media (max-width: 991.98px) {
+  .navbar-inst-menu li a {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .hero-section {
+    padding: 60px 0 56px;
+  }
+}
+
+/* --- 1200px (xl) --- */
+@media (min-width: 1200px) {
+  .navbar-inst-inner {
+    padding: 0 40px;
+  }
+}
+
+/* ============================================================
+   19. ACCESSIBILITY & FOCUS STATES
+   ============================================================ */
+a:focus-visible,
+button:focus-visible,
+.nav-link:focus-visible {
+  outline: 3px solid var(--color-dorado);
+  outline-offset: 2px;
+  border-radius: 4px;
+}

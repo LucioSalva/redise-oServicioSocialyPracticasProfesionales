@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/laragon/www//**)",
+      "Read(//c/xampp/**)",
+      "Bash(curl:*)",
+      "WebFetch(domain:ecatepec.gob.mx)"
+    ]
+  }
+}
