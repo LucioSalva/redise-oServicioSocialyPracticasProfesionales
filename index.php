@@ -1,11 +1,5 @@
 <?php
-/* ============================================================
-   SERVICIO SOCIAL Y PRÁCTICAS PROFESIONALES — Ecatepec
-   Archivo: index.php
-   Dirección de Educación — H. Ayuntamiento de Ecatepec de Morelos
-   ============================================================ */
 
-/* --- DATA: Requisitos y Procedimientos --- */
 
 $requisitos_publicas = [
     'Forma de pre-registro para escuelas públicas.',
@@ -111,9 +105,6 @@ $formatos_privadas = [
 </head>
 <body>
 
-  <!-- ============================================================
-       NAVBAR INSTITUCIONAL — NO MODIFICAR
-       ============================================================ -->
   <nav class="navbar-institucional" style="background-color: #691C32;" role="navigation" aria-label="Navegación institucional">
     <div class="navbar-inst-inner">
       <div class="navbar-inst-logo">
@@ -140,7 +131,6 @@ $formatos_privadas = [
       </button>
     </div>
 
-    <!-- Mobile nav drawer -->
     <div class="navbar-inst-mobile" id="navbarInstMobile" aria-hidden="true">
       <ul>
         <li><a href="#">Inicio</a></li>
@@ -154,9 +144,6 @@ $formatos_privadas = [
     </div>
   </nav>
 
-  <!-- ============================================================
-       BREADCRUMB
-       ============================================================ -->
   <div class="breadcrumb-wrapper" aria-label="Ruta de navegación">
     <div class="container">
       <nav class="breadcrumb-custom" aria-label="breadcrumb">
@@ -171,9 +158,6 @@ $formatos_privadas = [
 
   <main id="main-content">
 
-    <!-- ============================================================
-         HERO SECTION
-         ============================================================ -->
     <section class="hero-section" aria-labelledby="hero-title">
       <div class="container">
         <div class="row">
@@ -205,9 +189,6 @@ $formatos_privadas = [
       </div>
     </section>
 
-    <!-- ============================================================
-         SECCIÓN DE MODALIDADES — Bootstrap Tabs
-         ============================================================ -->
     <section class="modalidades-section" id="modalidades" aria-labelledby="modalidades-heading">
       <div class="container">
 
