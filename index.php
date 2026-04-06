@@ -105,40 +105,185 @@ $formatos_privadas = [
 </head>
 <body>
 
-  <nav class="navbar-institucional" style="background-color: #691C32;" role="navigation" aria-label="Navegación institucional">
+    <nav class="navbar-institucional" role="navigation" aria-label="Navegacion institucional">
     <div class="navbar-inst-inner">
-      <div class="navbar-inst-logo">
-        <img src="https://ecatepec.gob.mx/wp-content/themes/blocksy-child/img/logo-ecatepec-blanco.png"
-             alt="Ecatepec de Morelos"
-             height="50"
-             onerror="this.style.display='none'">
-      </div>
       <ul class="navbar-inst-menu" role="menubar">
-        <li role="none"><a href="#" role="menuitem">Inicio</a></li>
-        <li role="none"><a href="#" role="menuitem">Transparencia</a></li>
-        <li role="none"><a href="#" role="menuitem">Trámites – Servicios</a></li>
-        <li role="none"><a href="#" role="menuitem">Enlace Municipal</a></li>
-        <li role="none"><a href="#" role="menuitem">Descubre Ecatepec</a></li>
-        <li role="none"><a href="#" role="menuitem">Mejora Regulatoria</a></li>
-        <li role="none"><a href="#" role="menuitem">Contacto</a></li>
+        <li class="navbar-inst-item" role="none">
+          <a class="navbar-inst-link" href="#" role="menuitem">Inicio</a>
+        </li>
+
+        <li class="navbar-inst-item has-dropdown" role="none">
+          <button class="navbar-inst-link navbar-inst-dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            Gobierno <i class="bi bi-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="navbar-inst-dropdown-menu" role="menu" aria-label="Submenu Gobierno">
+            <li role="none"><a href="#" role="menuitem">Cabildo</a></li>
+            <li role="none"><a href="#" role="menuitem">Organigrama</a></li>
+            <li role="none"><a href="#" role="menuitem">Organos Autonomos</a></li>
+            <li role="none"><a href="#" role="menuitem">Instituto de las Mujeres e Igualdad de Genero</a></li>
+            <li role="none"><a href="#" role="menuitem">Enlace Municipal</a></li>
+          </ul>
+        </li>
+
+        <li class="navbar-inst-item has-dropdown" role="none">
+          <button class="navbar-inst-link navbar-inst-dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            Transparencia <i class="bi bi-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="navbar-inst-dropdown-menu navbar-inst-dropdown-menu-wide" role="menu" aria-label="Submenu Transparencia">
+            <li role="none"><a href="#" role="menuitem">Obligaciones de Transparencia</a></li>
+            <li role="none"><a href="#" role="menuitem">Programas Sociales</a></li>
+            <li role="none"><a href="#" role="menuitem">Plan de Desarrollo Municipal</a></li>
+            <li role="none"><a href="#" role="menuitem">Nombramientos</a></li>
+            <li role="none"><a href="#" role="menuitem">Programa Anual de Evaluacion</a></li>
+            <li role="none"><a href="#" role="menuitem">Estrados y Edictos</a></li>
+            <li class="navbar-inst-divider" role="separator" aria-hidden="true"></li>
+            <li role="none"><a href="#" role="menuitem">SRFT</a></li>
+            <li role="none"><a href="#" role="menuitem">Aviso de Privacidad Integral</a></li>
+            <li class="navbar-inst-divider" role="separator" aria-hidden="true"></li>
+            <li role="none"><a href="#" role="menuitem">Ley General de Contabilidad Gubernamental</a></li>
+            <li role="none"><a class="submenu-child" href="#" role="menuitem">CONAC</a></li>
+            <li role="none"><a class="submenu-child" href="#" role="menuitem">SEVAC</a></li>
+            <li role="none"><a class="submenu-child" href="#" role="menuitem">IPOMEX</a></li>
+          </ul>
+        </li>
+
+        <li class="navbar-inst-item has-dropdown is-active" role="none">
+          <button class="navbar-inst-link navbar-inst-dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            Tramites y Servicios <i class="bi bi-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="navbar-inst-dropdown-menu" role="menu" aria-label="Submenu Tramites y Servicios">
+            <li role="none"><a href="#" role="menuitem">REMTYS</a></li>
+            <li role="none"><a href="#" role="menuitem">Servicios</a></li>
+            <li role="none"><a href="#" role="menuitem">Pago Predial en Linea</a></li>
+            <li class="navbar-inst-divider" role="separator" aria-hidden="true"></li>
+            <li role="none"><a class="is-current" href="index.php" role="menuitem">Servicio Social y Practicas Profesionales</a></li>
+          </ul>
+        </li>
+
+        <li class="navbar-inst-item has-dropdown" role="none">
+          <button class="navbar-inst-link navbar-inst-dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            Participacion Ciudadana <i class="bi bi-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="navbar-inst-dropdown-menu" role="menu" aria-label="Submenu Participacion Ciudadana">
+            <li role="none"><a href="#" role="menuitem">Convocatorias</a></li>
+            <li role="none"><a href="#" role="menuitem">Consulta Publica</a></li>
+            <li role="none"><a href="#" role="menuitem">Protesta Ciudadana</a></li>
+          </ul>
+        </li>
+
+        <li class="navbar-inst-item has-dropdown" role="none">
+          <button class="navbar-inst-link navbar-inst-dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            Mejora Regulatoria <i class="bi bi-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="navbar-inst-dropdown-menu" role="menu" aria-label="Submenu Mejora Regulatoria">
+            <li role="none"><a href="#" role="menuitem">Catalogo Municipal de Regulaciones</a></li>
+            <li role="none"><a href="#" role="menuitem">Programa Anual</a></li>
+            <li role="none"><a href="#" role="menuitem">Padron de Inspectores</a></li>
+            <li role="none"><a href="#" role="menuitem">Plan Municipal Desarrollo Urbano EDOMEX 2022</a></li>
+          </ul>
+        </li>
+
+        <li class="navbar-inst-item has-dropdown" role="none">
+          <button class="navbar-inst-link navbar-inst-dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            Conoce Ecatepec <i class="bi bi-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="navbar-inst-dropdown-menu" role="menu" aria-label="Submenu Conoce Ecatepec">
+            <li role="none"><a href="#" role="menuitem">Cultura</a></li>
+            <li role="none"><a href="#" role="menuitem">Galeria</a></li>
+            <li role="none"><a href="#" role="menuitem">Boletin</a></li>
+            <li role="none"><a href="#" role="menuitem">Comunidad Nido</a></li>
+            <li role="none"><a href="#" role="menuitem">Gacetas</a></li>
+          </ul>
+        </li>
+
+        <li class="navbar-inst-item" role="none">
+          <a class="navbar-inst-link" href="#" role="menuitem">Contacto</a>
+        </li>
       </ul>
+
       <button class="navbar-inst-toggler"
+              type="button"
               onclick="toggleInstNav()"
               aria-controls="navbarInstMobile"
               aria-expanded="false"
-              aria-label="Abrir menú de navegación">
-        ☰
+              aria-label="Abrir menu de navegacion">
+        &#9776;
       </button>
     </div>
 
     <div class="navbar-inst-mobile" id="navbarInstMobile" aria-hidden="true">
-      <ul>
+      <ul class="navbar-inst-mobile-list">
         <li><a href="#">Inicio</a></li>
-        <li><a href="#">Transparencia</a></li>
-        <li><a href="#">Trámites – Servicios</a></li>
-        <li><a href="#">Enlace Municipal</a></li>
-        <li><a href="#">Descubre Ecatepec</a></li>
-        <li><a href="#">Mejora Regulatoria</a></li>
+
+        <li class="has-mobile-submenu">
+          <button type="button" class="navbar-inst-mobile-toggle" aria-expanded="false">Gobierno <i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+          <ul class="navbar-inst-mobile-submenu">
+            <li><a href="#">Cabildo</a></li>
+            <li><a href="#">Organigrama</a></li>
+            <li><a href="#">Organos Autonomos</a></li>
+            <li><a href="#">Instituto de las Mujeres e Igualdad de Genero</a></li>
+            <li><a href="#">Enlace Municipal</a></li>
+          </ul>
+        </li>
+
+        <li class="has-mobile-submenu">
+          <button type="button" class="navbar-inst-mobile-toggle" aria-expanded="false">Transparencia <i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+          <ul class="navbar-inst-mobile-submenu">
+            <li><a href="#">Obligaciones de Transparencia</a></li>
+            <li><a href="#">Programas Sociales</a></li>
+            <li><a href="#">Plan de Desarrollo Municipal</a></li>
+            <li><a href="#">Nombramientos</a></li>
+            <li><a href="#">Programa Anual de Evaluacion</a></li>
+            <li><a href="#">Estrados y Edictos</a></li>
+            <li><a href="#">SRFT</a></li>
+            <li><a href="#">Aviso de Privacidad Integral</a></li>
+            <li><a href="#">Ley General de Contabilidad Gubernamental</a></li>
+            <li><a href="#">CONAC</a></li>
+            <li><a href="#">SEVAC</a></li>
+            <li><a href="#">IPOMEX</a></li>
+          </ul>
+        </li>
+
+        <li class="has-mobile-submenu is-active">
+          <button type="button" class="navbar-inst-mobile-toggle" aria-expanded="false">Tramites y Servicios <i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+          <ul class="navbar-inst-mobile-submenu">
+            <li><a href="#">REMTYS</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Pago Predial en Linea</a></li>
+            <li><a class="is-current" href="index.php">Servicio Social y Practicas Profesionales</a></li>
+          </ul>
+        </li>
+
+        <li class="has-mobile-submenu">
+          <button type="button" class="navbar-inst-mobile-toggle" aria-expanded="false">Participacion Ciudadana <i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+          <ul class="navbar-inst-mobile-submenu">
+            <li><a href="#">Convocatorias</a></li>
+            <li><a href="#">Consulta Publica</a></li>
+            <li><a href="#">Protesta Ciudadana</a></li>
+          </ul>
+        </li>
+
+        <li class="has-mobile-submenu">
+          <button type="button" class="navbar-inst-mobile-toggle" aria-expanded="false">Mejora Regulatoria <i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+          <ul class="navbar-inst-mobile-submenu">
+            <li><a href="#">Catalogo Municipal de Regulaciones</a></li>
+            <li><a href="#">Programa Anual</a></li>
+            <li><a href="#">Padron de Inspectores</a></li>
+            <li><a href="#">Plan Municipal Desarrollo Urbano EDOMEX 2022</a></li>
+          </ul>
+        </li>
+
+        <li class="has-mobile-submenu">
+          <button type="button" class="navbar-inst-mobile-toggle" aria-expanded="false">Conoce Ecatepec <i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+          <ul class="navbar-inst-mobile-submenu">
+            <li><a href="#">Cultura</a></li>
+            <li><a href="#">Galeria</a></li>
+            <li><a href="#">Boletin</a></li>
+            <li><a href="#">Comunidad Nido</a></li>
+            <li><a href="#">Gacetas</a></li>
+          </ul>
+        </li>
+
         <li><a href="#">Contacto</a></li>
       </ul>
     </div>
