@@ -1,0 +1,20 @@
+name: redisenossypp
+
+services:
+  web:
+    image: php:8.2-apache
+    container_name: ssypp_web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html/rediseñoServicioSocialyPracticasProfesionales
+    working_dir: /var/www/html/rediseñoServicioSocialyPracticasProfesionales
+    environment:
+      APACHE_DOCUMENT_ROOT: /var/www/html
+    healthcheck:
+      test: ["CMD-SHELL", "php -r 'exit(@file_get_contents(\"http://localhost/rediseñoServicioSocialyPracticasProfesionales/\") === false ? 1 : 0);'"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: unless-stopped

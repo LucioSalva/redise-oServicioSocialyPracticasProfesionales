@@ -1,0 +1,38 @@
+# OCR temp / artefactos
+tmp/
+*.pdf
+!docs/**/*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+error_log
+
+# Dependencias
+/vendor/
+/node_modules/
+
+# Entornos
+.env
+.env.local
+.env.*.local
+
+# Claude (rastros locales)
+.claude/
+
+# Docker volúmenes locales
+docker-compose.override.yml
+
+# PHP
+*.cache
